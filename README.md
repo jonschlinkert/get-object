@@ -1,13 +1,13 @@
-# get-value [![NPM version](https://badge.fury.io/js/get-value.svg)](http://badge.fury.io/js/get-value)
+# get-object [![NPM version](https://badge.fury.io/js/get-object.svg)](http://badge.fury.io/js/get-object)
 
 
-> Get a value from a property on a nested object.
+> Get a object from a property on a nested object.
 
 ## Install
 #### Install with [npm](npmjs.org):
 
 ```bash
-npm i get-value --save-dev
+npm i get-object --save-dev
 ```
 
 ## Run tests
@@ -27,7 +27,7 @@ node benchmark
 ## Usage
 
 ```js
-var get = require('get-value');
+var get = require('get-object');
 
 get({a: 'a', b: {c: 'd'}}, 'a')
 //=> 'a'
