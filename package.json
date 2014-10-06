@@ -1,7 +1,7 @@
 {
   "name": "get-object",
   "description": "Get a object from a property on a nested object.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/jonschlinkert/get-object",
   "author": {
     "name": "Jon Schlinkert",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "ansi": "^0.3.0",
     "benchmark": "^1.0.0",
+    "chalk": "^0.5.1",
     "mocha": "*",
     "should": "^4.0.4",
     "verb": ">= 0.2.6",
@@ -65,9 +66,5 @@
     "utility",
     "utils",
     "value"
-  ],
-  "dependencies": {
-    "chalk": "^0.5.1",
-    "lodash": "^2.4.1"
-  }
+  ]
 }
