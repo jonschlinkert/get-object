@@ -7,9 +7,15 @@
 
 'use strict';
 
+var isObject = require('isobject');
+
 module.exports = function get(o, lookup) {
-  if (typeof o !== 'object') {
-    return null;
+  if (o == null || !isObject(o)) {
+    return {};
+  }
+
+  if (lookup == null) {
+    return o;
   }
 
   var seg = lookup.split('.');
