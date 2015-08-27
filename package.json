@@ -1,7 +1,7 @@
 {
   "name": "get-object",
-  "description": "Get a object from a property on a nested object.",
-  "version": "0.1.3",
+  "description": "Get a property from an object using dot (object path) notation.",
+  "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/get-object",
   "author": {
     "name": "Jon Schlinkert",
@@ -14,27 +14,21 @@
   "bugs": {
     "url": "https://github.com/jonschlinkert/get-object/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/jonschlinkert/get-object/blob/master/LICENSE-MIT"
-    }
-  ],
+  "license": "MIT",
   "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha"
+  },
+  "dependencies": {
+    "is-number": "^2.0.2",
+    "isobject": "^0.2.0"
   },
   "devDependencies": {
-    "ansi": "^0.3.0",
-    "benchmark": "^1.0.0",
-    "chalk": "^0.5.1",
     "mocha": "*",
-    "should": "^4.0.4",
-    "verb": ">= 0.2.6",
-    "verb-tag-jscomments": ">= 0.2.0"
+    "should": "*"
   },
   "keywords": [
     "check",
@@ -67,7 +61,19 @@
     "utils",
     "value"
   ],
-  "dependencies": {
-    "isobject": "^0.2.0"
-  }
+  "verb": {
+    "related": {
+      "list": [
+        "get-value",
+        "set-value",
+        "union-value",
+        "unset-value",
+        "upsert-value",
+        "del-value"
+      ]
+    }
+  },
+  "files": [
+    "index.js"
+  ]
 }
