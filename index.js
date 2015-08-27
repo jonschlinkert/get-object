@@ -7,26 +7,18 @@
 
 'use strict';
 
-var isObject = require('isobject');
+var isNumber = require('is-number');
 
-module.exports = function get(o, lookup) {
-  if (o == null || !isObject(o)) {
-    return {};
+module.exports = function getObject(obj, prop) {
+  if (!prop) return obj;
+  if (!obj) return {};
+  var segs = String(prop).split(/[[.\]]/).filter(Boolean);
+  var last = segs[segs.length  - 1], res = {};
+  while (prop = segs.shift()) {
+    obj = obj[prop];
+    if (!obj) return {};
   }
-
-  if (lookup == null) {
-    return o;
-  }
-
-  var seg = lookup.split('.');
-  var len = seg.length;
-
-  for (var i = 0; i < len; i++) {
-    var key = seg[i];
-    if (!o.hasOwnProperty(key)) {
-      o[key] = {};
-    }
-    o = o[key];
-  }
-  return o;
+  if (isNumber(last)) return [obj];
+  res[last] = obj;
+  return res;
 };
